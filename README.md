@@ -1,0 +1,3 @@
+# webpage.Centro_Medico
+¡Hola! Te relato un poco sobre este repositorio... Es un sistema web desarrollado con HTML 5, CSS y JavaScript, gestionado con una base de datos a disposición de Django 
+para la gestión y permisos de usuarios. Como funcionalidad tenemos la principal.page dedicado a la promoción de información acerca del centro médico contacto etc. Contando con una gestión de preguntas y respuestas conectadas al correo del usuario y el correo oficial del servicio médico (spam). Cuenta con dos usuarios Médico/Secretaria en el cual al primero se le permite la gestión de pacientes denominarlos como atendidos o pendientes y enlistar estos. Secretaria contiene más funciones como el nuevo ingreso de pacientes como afiliados, gestión de horas programadas o urgencias.
