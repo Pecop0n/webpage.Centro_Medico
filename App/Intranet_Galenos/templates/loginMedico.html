@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300' rel='stylesheet'
+        type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=BenchNine:300,400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/usuario.css' %}">
+    <title>Inicio de sesion </title>
+</head>
+<section class="form-usuarios">
+    <section class="about text-center" id="about">
+        <div class="container">
+            <center>
+                <div class="row">
+                    <h2 style="color: #000085">Medicos</h2>
+                    <h4>Bienvenido! te encuentras en área de secretaria, para poder acceder debe ingresar tus datos
+                        correctamente</h4>
+                </div>
+            </center>
+    </section>
+
+    <body>
+        <center>
+            <section class="form-login">
+                <h1>Ingresa tu usuario y contraseña</h1>
+                <form name=form action="INICIO SESION">
+                    <input class="controls" type="text" name="usuario" value="" placeholder="Nombre de Usuario">
+                    <input class="controls" type="password" name="contraseña" value="" placeholder="Contraseña">
+                    <a href="{% url 'AtencionPacientes' %}"><input class="buttons" type=button name="enviar"
+                            value="Ingresar">
+                </form>
+            </section>
+        </center>
+    </body>
+
+</html>

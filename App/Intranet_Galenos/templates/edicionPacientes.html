@@ -1,0 +1,46 @@
+{% extends "./base.html" %}
+
+{% block title %}Gestion de Pacientes {% endblock%}
+
+{% block body %}
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <h5>Edicion de datos</h5>
+        <div class="card">
+            <div class="card-body">
+                <form action="{% url 'EditarPaciente' %}" method="POST"> {% csrf_token %}
+                    <div class="form-group">
+                        <input type="number" id="numbID_paciente" name="numbID_paciente" class="form-control" value="{{paciente.id_paciente}}" required readonly placeholder="ID del paciente" >
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtNombre_pa" name="txtNombre_pa" required class="form-control" value="{{paciente.pa_nombre}}" readonly  placeholder="Nombre del paciente"  >
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtApellido_pa" name="txtApellido_pa" required class="form-control" value="{{paciente.pa_apellido}}" placeholder="Apellido del paciente" >
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="txtRUT_pa" name="txtRUT_pa" class="form-control" value="{{paciente.pa_rut}}" required placeholder="Rut del paciente" >
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="numbEdad_pa" name="numbEdad_pa" required class="form-control" value="{{paciente.pa_edad}}" placeholder="Edad del paciente" >
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtSexo_pa" name="txtSexo_pa" required maxlength="1" minlength="1" class="form-control" value="{{paciente.sexo}}" placeholder="Sexo del paciente" >
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtSeguro_pa" name="txtSeguro_pa" required class="form-control" value="{{paciente.seguro}}" placeholder="Seguro" >
+                    </div>
+                    <div class="form-group">
+                        <input type="date" id="dteFechaIngres_pa" name="dteFechaIngres_pa" required class="form-control" value="{{paciente.fec_ingreso}}" placeholder="Fecha de ingreso" >
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-block text-white">Guardar
+
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

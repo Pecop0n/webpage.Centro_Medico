@@ -1,0 +1,40 @@
+{% extends "./basemedico.html" %}
+
+{% block title %}Atencion de Pacientes {% endblock%}
+
+{% block body %}
+<div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
+        <div class="table-resposive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>ID</th>
+                        <th>Nombre Paciente</th>
+                        <th>Nombre Medico</th>
+                        <th>Consulta</th>
+                        <th>Fecha Consulta</th>                    
+                        <th>Estado</th>                
+                        <th colspan="2">Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for h in atencionPacientes %}
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{h.id_horamedica}}</td>
+                        <td>{{h.paciente}}</td>
+                        <td>{{h.medico}}</td>        
+                        <td>{{h.consulta}}</td>
+                        <td>{{h.fec_consulta}}</td>
+                        <td>{{h.estado}}</td>
+                        <th><a href="{% url 'EliminarAtencion' h.id_horamedica %}" class="btn btn-danger btnEliminacion">Paciente Atendido</a></th>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
